@@ -22,7 +22,7 @@ text-align: center;
 textarea{
   height:150px;
   width: 600px;
-
+  style:block;
 }
 
 .wide{
@@ -90,7 +90,7 @@ textarea{
 
 .delete{
   background-color: red;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .each{
