@@ -36,10 +36,12 @@ textarea{
   background-color: white;
   padding-left: 30px;
   padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .inputs{
   width:75%;
+  margin-top: 30px;
 }
 
 .background{
@@ -57,7 +59,7 @@ textarea{
 
 .checkl{
   margin-left: 20px;
-  width: 400px;
+  width:200px;
 }
 
 .red{
@@ -66,6 +68,7 @@ textarea{
 
 .edit{
   text-align: right;
+  color:black;
 }
 
 .arti{
@@ -135,4 +138,10 @@ a{
 
 .showbod{
   width:1160px;
+}
+
+.line{
+  border-bottom: 1px solid #d3d3d3;
+  width: 1000px;
+  margin-bottom: 0;
 }

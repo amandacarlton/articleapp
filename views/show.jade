@@ -5,13 +5,23 @@ block content
   div.background
    a.dark(href="/")
     h2.zine The Zine
-  div.arti.show(style="background-image:url("+info.url+")")
-   if(info.colors=="on")
-     h1.white=info.title
-   else
-     h1.dark=info.title
-   div.edit
-     a(href="/articles/"+info._id+"/edit") Edit
-  div.body.showbod
-    p=info.main
-  
+  if (info.url.length>0)
+    div.arti.show(style="background-image:url("+info.url+")")
+     if(info.colors=="on")
+       h1.white=info.title
+     else
+       h1.dark=info.title
+     div.edit
+       a(href="/articles/"+info._id+"/edit") Edit
+    div.body.showbod
+      p=info.main
+  else
+   div.arti.show(style="background-image:url(https://download.unsplash.com/photo-1433838552652-f9a46b332c40)")
+    if(info.colors=="on")
+      h1.white=info.title
+    else
+      h1.dark=info.title
+    div.edit
+      a.edit(href="/articles/"+info._id+"/edit") Edit
+   div.body.showbod
+     p=info.main
