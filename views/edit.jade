@@ -1,0 +1,35 @@
+extends layout
+
+block content
+
+  div.background
+   a.dark(href="/")
+    h2.zine The Zine
+  div.new
+    div.article
+     h2 Edit Article
+     form(action= "/articles/"+info._id+"/edit", method= "post")
+       div.inputs
+        label(for= "title") Title
+        input.wide(type= "text" id= "title" name="title" value=info.title)
+        p
+        label(for= "url") Background URL
+        input.wide(type= "text" id= "url" name="url" value=info.url)
+        p
+        input.check(type= "checkbox" name="color" id= "color" checked=info.colors=="on")
+        label.checkl(for= "color") Background image has dark colors
+        p
+        label(for="excerpt") Excerpt
+        textarea(type="textarea" name="excerpt" id="excerpt" )=info.excerpt
+        p
+        label(for= "long") Body
+        textarea(type= "textarea" name="long" id="long")= info.main
+        p
+        input.add(type="submit" value="Edit Article")
+     form(action="/articles/" + info._id + "/delete", method="post")
+      input.add.delete(type="submit" value="Delete")
+     if (errorlist)
+      div.red
+       ul 
+        for item in errorlist
+          li= item

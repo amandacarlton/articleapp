@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+  div.background
+   a.dark(href="/")
+    h2.zine The Zine
+  div.arti.show(style="background-image:url("+info.url+")")
+   if(info.colors=="on")
+     h1.white=info.title
+   else
+     h1.dark=info.title
+   div.edit
+     a(href="/articles/"+info._id+"/edit") Edit
+  div.body.showbod
+    p=info.main
+  

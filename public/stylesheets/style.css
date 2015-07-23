@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('https://raw.githubusercontent.com/gSchool/express-crud-assessment/master/congruent_outline.png?token=ALrLZLBBBBuzJCY6I-aob8unBwYRyfRPks5VuktpwA%3D%3D');
 }
 
 a {
@@ -17,19 +18,121 @@ a {
 text-align: center;
 }
 
-input textarea {
-  width:75%;
-}
+
 textarea{
   height:150px;
+  width: 600px;
+
 }
 
+.wide{
+  width:600px;
+}
+
+
 .article{
-  width: 1000px;
-  border: 1px solid black;
+  width: 98.5%;
+  margin-top: 75px;
+  background-color: white;
+  padding-left: 30px;
+  padding-bottom: 30px;
 }
 
 .inputs{
-  border: 1px solid black;
   width:75%;
+}
+
+.background{
+  background-image: url('https://unsplash.imgix.net/photo-1429198739803-7db875882052?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050');
+  height: 100px;
+  width: 92%;
+  text-align: right;
+  top:0px;
+  position: absolute;
+}
+
+.check{
+  margin-left: 150px;
+}
+
+.checkl{
+  margin-left: 20px;
+  width: 400px;
+}
+
+.red{
+  color: red;
+}
+
+.edit{
+  text-align: right;
+}
+
+.arti{
+
+  background-image: url(item.url);
+  margin-top: 60px;
+  height: 40px;
+}
+
+.body{
+  background-color: white;
+  padding:10px;
+  margin-top: 0;
+}
+
+.add{
+  margin-left: 150px;
+}
+
+.delete{
+  background-color: red;
+  margin-top: 5px;
+}
+
+.each{
+  width:100%;
+  height: 100px;
+}
+
+.create{
+  margin-top: 20px;
+}
+
+.white{
+  color: white;
+}
+.dark{
+  color:black;
+}
+
+a{
+  text-decoration: none;
+}
+
+.mainart{
+  width: 1180px;
+}
+
+.zine{
+  margin-top: 30px;
+}
+
+.image{
+  margin-top: 70px;
+  width:1180px;
+}
+
+.about{
+  background-color: white;
+  margin-top: 0;
+}
+
+.show{
+  height: 100px;
+  width: 1180px;
+}
+
+.showbod{
+  width:1160px;
 }

@@ -1,6 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  a(href="/articles/new") Create New
+ div.background
+  h2.zine The Zine
+ for item in info
+    div.mainart
+      div.arti(style="background-image:url("+item.url+")")
+       if(item.colors=="on")
+        a(href="/articles/"+item._id)
+         h1.white=item.title
+       else
+        a(href="/articles/"+item._id)
+         h1.dark=item.title
+      div.body
+       p=item.excerpt 
+ div.create
+ a(href="/articles/new") Create New

@@ -3,26 +3,32 @@ extends layout
 block content
 
   div.background
-    h2 The Zine
+   a.dark(href="/")
+    h2.zine The Zine
   div.new
     div.article
      h2 New Article
      form(action= "/articles", method= "post")
        div.inputs
         label(for= "title") Title
-        input(type= "text" id= "title" name= "title")
+        input.wide(type= "text" id= "title" name="title" value=title)
         p
         label(for= "url") Background URL
-        input(type= "text" id= "url" name= "url")
+        input.wide(type= "text" id= "url" name="url" value=url)
         p
-        input(type= "checkbox" name= "color" id= "color")
-        label(for= "color") Background image has dark colors
+        input.check(type= "checkbox" name="color" id= "color")
+        label.checkl(for= "color") Background image has dark colors
         p
         label(for="excerpt") Excerpt
-        textarea(type="textarea" name="excerpt" id="excerpt")
+        textarea(type="textarea" name="excerpt" id="excerpt" value=excerpt)
         p
-        label(for= "body") Body
-        textarea(type= "textarea" name="body" id="body")
+        label(for= "long") Body
+        textarea(type= "textarea" name="long" id="long" value=main)
         p
-        input(type="submit" value="Add Article")
+        input.add(type="submit" value="Add Article")
+     if (errorlist)
+      div.red
+       ul 
+        for item in errorlist
+          li= item
   
