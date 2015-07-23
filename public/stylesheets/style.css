@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.inputs label{
+  display: inline-block;
+  text-align: left;
+  width: 150px;
+}
+
+#color{
+text-align: center;
+}
+
+input textarea {
+  width:75%;
+}
+textarea{
+  height:150px;
+}
+
+.article{
+  width: 1000px;
+  border: 1px solid black;
+}
+
+.inputs{
+  border: 1px solid black;
+  width:75%;
+}

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+  div.background
+    h2 The Zine
+  div.new
+    div.article
+     h2 New Article
+     form(action= "/articles", method= "post")
+       div.inputs
+        label(for= "title") Title
+        input(type= "text" id= "title" name= "title")
+        p
+        label(for= "url") Background URL
+        input(type= "text" id= "url" name= "url")
+        p
+        input(type= "checkbox" name= "color" id= "color")
+        label(for= "color") Background image has dark colors
+        p
+        label(for="excerpt") Excerpt
+        textarea(type="textarea" name="excerpt" id="excerpt")
+        p
+        label(for= "body") Body
+        textarea(type= "textarea" name="body" id="body")
+        p
+        input(type="submit" value="Add Article")
+  
