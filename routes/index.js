@@ -15,7 +15,7 @@ router.get('/articles/new', function(req, res, next) {
 });
 
 router.post('/articles', function(req, res, next){
-  var errorlist=(validator.validations(req.body.title, req.body.url, req.body.excerpt, req.body.long));
+  var errorlist=(validator.validations(req.body.title, req.body.excerpt, req.body.long));
 if(errorlist.length>0){
   res.render("new", {errorlist:errorlist, title:req.body.title, url:req.body.url, excerpt:req.body.excerpt, main:req.body.long});
 }else{
@@ -38,7 +38,7 @@ router.get('/articles/:id/edit', function(req, res, next){
 });
 
 router.post('/articles/:id/edit', function(req, res, next){
-  var errorlist=(validator.validations(req.body.title, req.body.url, req.body.excerpt, req.body.long));
+  var errorlist=(validator.validations(req.body.title, req.body.excerpt, req.body.long));
 if(errorlist.length>0){
   articles.findOne({_id:req.params.id},function(err, info){
   res.render("edit", {errorlist:errorlist, info:info, title:req.body.title, url:req.body.url, excerpt:req.body.excerpt, main:req.body.long});

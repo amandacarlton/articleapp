@@ -5,14 +5,25 @@ block content
   h2.zine The Zine
  for item in info
     div.mainart
+     if (item.url.length>0)
       div.arti(style="background-image:url("+item.url+")")
-       if(item.colors=="on")
-        a(href="/articles/"+item._id)
-         h1.white=item.title
-       else
-        a(href="/articles/"+item._id)
-         h1.dark=item.title
-      div.body
-       p=item.excerpt
+        if(item.colors=="on")
+         a(href="/articles/"+item._id)
+          h1.white=item.title
+        else
+         a(href="/articles/"+item._id)
+          h1.dark=item.title
+       div.body
+        p=item.excerpt
+     else
+      div.arti(style="background-image:url(https://download.unsplash.com/photo-1433838552652-f9a46b332c40)")
+         if(item.colors=="on")
+          a(href="/articles/"+item._id)
+           h1.white=item.title
+         else
+          a(href="/articles/"+item._id)
+           h1.dark=item.title
+        div.body
+         p=item.excerpt        
  div.create
  a(href="/articles/new") Create New

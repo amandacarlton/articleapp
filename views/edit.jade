@@ -29,6 +29,7 @@ block content
      form(action="/articles/" + info._id + "/delete", method="post")
       input.add.delete(type="submit" value="Delete")
      if (errorlist)
+      h1 Please correct the errors below
       div.red
        ul 
         for item in errorlist
